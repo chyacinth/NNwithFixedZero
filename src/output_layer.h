@@ -41,7 +41,10 @@ namespace mlp{
 		void remap_best(){};
 
 		void printW(){};
+
 		void printWfixed(){};
+
+        void fprintW(FILE*){};
 
 #ifdef GPU
 		void transfer_weight_h2d(){};

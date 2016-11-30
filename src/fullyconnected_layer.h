@@ -18,7 +18,7 @@ namespace mlp{
 	class FullyConnectedLayer :public Layer
 	{
 	public:
-		FullyConnectedLayer(size_t in_depth, size_t out_depth, activation* a, bool increment = false) :
+		FullyConnectedLayer(size_t in_depth, size_t out_depth, activation* a) :
 			Layer(in_depth, out_depth, a)
 		{
 			int row, col;
@@ -31,11 +31,13 @@ namespace mlp{
 				row = i / in_depth;
 				col = i % in_depth;
 				W_fix[i] = 0;
+#ifdef FIXED_ZERO
 				if (increment)
 				{
 					if ((row % 2 == 0) && (col % 2 == 0)) W_fix[i] = 1;
 					if ((row % 2 == 1) && (col % 2 == 1)) W_fix[i] = 1;
 				}
+#endif
 			}
 			deltaW_.resize(in_depth_ * out_depth_);
 			b_.resize(out_depth_);
@@ -99,6 +101,8 @@ namespace mlp{
 		void printW();
 
 		void printWfixed();
+
+        void fprintW(FILE*);
 #ifdef GPU
 		void transfer_weight_h2d();
 		void transfer_weight_d2h();

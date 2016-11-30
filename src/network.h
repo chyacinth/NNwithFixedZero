@@ -1,6 +1,6 @@
 #ifndef NETWORK_H_
 #define NETWORK_H_
-#define FIXED_ZERO
+//#define FIXED_ZERO
 //#define GPU
 #pragma once
 
@@ -315,6 +315,8 @@ namespace mlp{
 
 
         void train(const vec2d_t& train_x, const vec_t& train_y, size_t train_size){
+            FILE *fp;
+            fp = fopen("weight.txt","w");
             train_x_ = train_x;
             train_y_ = train_y;
             train_size_ = train_size;
@@ -346,10 +348,15 @@ namespace mlp{
                 if (err < END_CONDITION) stop = true;
                 for (auto layer:layers)
                 {
-                    if (iter % 5 == 0)
+                    if (iter % 50 == 0)
                     layer->printW();
                 }
             }
+            for (auto layer:layers)
+            {
+                layer->fprintW(fp);
+            }
+            fclose(fp);
             this->delete_layer();
         }
 

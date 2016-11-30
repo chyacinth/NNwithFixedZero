@@ -1,6 +1,7 @@
 #GPU=1
 DEBUG=0
 
+#FIXED_ZERO=1
 ARCH= --gpu-architecture=compute_52 --gpu-code=compute_52
 
 VPATH=./src/

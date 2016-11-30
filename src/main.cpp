@@ -24,7 +24,7 @@ int main(int argc,char* argv[]){
 	
 	Mlp n(0.03, 0.01);
 
-	n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation, true));
+	n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
     n.train(train_x,train_y,60000);
 
 	
