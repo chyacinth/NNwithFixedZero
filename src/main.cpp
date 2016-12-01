@@ -1,6 +1,6 @@
 #define MAIN2
 #ifdef MAIN2
-//#define GPU
+//#define FIXED_ZERO
 #include "network.h"
 
 #include "fstream"
@@ -22,7 +22,7 @@ int main(int argc,char* argv[]){
 	LOAD_MNIST_TEST(test_x, test_y);
 	LOAD_MNIST_TRAIN(train_x, train_y);
 	
-	Mlp n(0.03, 0.01);
+	Mlp n(0.03, 0.01, 0.0005);
 
 	n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
     n.train(train_x,train_y,60000);

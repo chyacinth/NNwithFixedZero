@@ -32,7 +32,7 @@ namespace mlp{
 				col = i % in_depth;
 				W_fix[i] = 0;
 #ifdef FIXED_ZERO
-				if (increment)
+				//if (increment)
 				{
 					if ((row % 2 == 0) && (col % 2 == 0)) W_fix[i] = 1;
 					if ((row % 2 == 1) && (col % 2 == 1)) W_fix[i] = 1;

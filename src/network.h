@@ -28,8 +28,8 @@ namespace mlp{
     class Mlp
     {
     public:
-        Mlp(float_t alpha, float_t lambda):
-                alpha_(alpha), lambda_(lambda)
+        Mlp(float_t alpha, float_t lambda, float_t weigntDecay):
+                alpha_(alpha), lambda_(lambda), weightDecay_(weigntDecay)
         {}
 
         //////GPU part
@@ -326,7 +326,7 @@ namespace mlp{
             this->add_layer(new OutputLayer(layers.back()->out_depth_, layers.back()->a_));
 
             for (auto layer : layers){
-                layer->alpha_ = alpha_, layer->lambda_ = lambda_;
+                layer->alpha_ = alpha_, layer->lambda_ = lambda_, layer->weightDecay_ = weightDecay_;
             }
 
             /*
@@ -663,6 +663,7 @@ namespace mlp{
 
         float_t alpha_;
         float_t lambda_;
+        float_t weightDecay_;
     };
 #undef MAX_ITER
 #undef M

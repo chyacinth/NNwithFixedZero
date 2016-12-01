@@ -95,6 +95,7 @@ namespace mlp{
 
 		float_t alpha_; // learning rate
 		float_t lambda_; // momentum
+        float_t weightDecay_;
 		vec_t g_; // err terms
 
 #ifdef GPU

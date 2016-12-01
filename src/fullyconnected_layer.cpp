@@ -338,7 +338,8 @@ namespace mlp{
 				auto delta = alpha_/*learning rate*/
 					* input_[in] * this->next->g_[out]/*err terms*/
 					/*lambda_ momentum*/
-					+ lambda_ * deltaW_[out * in_depth_ + in];
+					+ lambda_ * deltaW_[out * in_depth_ + in]
+					-  weightDecay_ * alpha_ * W_[out * in_depth_ + in]; //L2 regularization
 				W_[out * in_depth_ + in] += delta;
 				/*update momentum*/
 				deltaW_[out * in_depth_ + in] = delta;
