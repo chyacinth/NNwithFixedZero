@@ -26,6 +26,7 @@ int main(int argc,char* argv[]){
 	Mlp n(0.03, 0.01, inWD);
 	for (int i = 3; i < argc; i++)
 	{
+		printf("%d\n",atoi(argv[i]));
 		if (i == 3) n.add_layer(new FullyConnectedLayer(28 *28, atoi(argv[i]), new sigmoid_activation));
 		else n.add_layer(new FullyConnectedLayer(atoi(argv[i - 1]),atoi(argv[i]), new sigmoid_activation));
 	}
