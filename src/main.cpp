@@ -21,10 +21,16 @@ int main(int argc,char* argv[]){
 	//std::ofstream ofile("weight.txt");
 	LOAD_MNIST_TEST(test_x, test_y);
 	LOAD_MNIST_TRAIN(train_x, train_y);
-	
-	Mlp n(0.03, 0.01, 0.0005);
-
-	n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
+	float_t inWD = atof(argv[1]);
+	int lay = atoi(argv[2]);
+	Mlp n(0.03, 0.01, inWD);
+	if (lay == 0) n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
+	else if (lay == 1)
+	{
+		n.add_layer(new FullyConnectedLayer(28 *28, 100, new sigmoid_activation));
+		n.add_layer(new FullyConnectedLayer(100, 10, new sigmoid_activation));
+	}
+	//n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
     n.train(train_x,train_y,60000);
 
 	

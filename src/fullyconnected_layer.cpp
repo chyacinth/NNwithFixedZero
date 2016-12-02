@@ -357,7 +357,7 @@ namespace mlp{
 	void FullyConnectedLayer::printW()
 	{
 		printf("The weight matrix is:\n");
-		for (int i = 0; i < in_depth_ * out_depth_; i++)
+		for (int i = 0; i < 100; i++)
 		{
 			printf("%lf ",W_[i]);
 			if (((i + 1) % in_depth_) == 0)

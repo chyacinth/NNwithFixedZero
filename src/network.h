@@ -19,7 +19,7 @@
 
 
 namespace mlp{
-#define MAX_ITER 800
+#define MAX_ITER 80000
 #define FIX_NUMBER 25
 #define M 50
 #define END_CONDITION 1e-2
@@ -348,7 +348,7 @@ namespace mlp{
                 if (err < END_CONDITION) stop = true;
                 for (auto layer:layers)
                 {
-                    if (iter % 50 == 0)
+                    if (iter % 100 == 0)
                     layer->printW();
                 }
             }
