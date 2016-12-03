@@ -13,8 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46edeeef-332f-412b-ba91-36112bc02190" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network.h" afterPath="$PROJECT_DIR$/src/network.h" />
     </list>
     <ignored path="NNwithFixedZero.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="fullyconnected_layer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fullyconnected_layer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
-              <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+            <state relative-caret-position="270">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="e#672#814#0" expanded="true" />
                 <element signature="e#1246#2077#0" expanded="true" />
@@ -51,8 +51,8 @@
       <file leaf-file-name="main2.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,12 +93,12 @@
       <file leaf-file-name="network.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/network.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="616" column="26" selection-start-line="616" selection-start-column="26" selection-end-line="616" selection-end-column="26" />
+            <state relative-caret-position="30">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="e#268#316#0" expanded="true" />
-                <element signature="e#690#7770#0" expanded="true" />
-                <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+                <element signature="e#688#7768#0" expanded="true" />
+                <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
               </folding>
             </state>
           </provider>
@@ -127,8 +127,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding>
                 <element signature="e#48#68#0" expanded="true" />
               </folding>
@@ -451,7 +451,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28541000" />
+    <option name="totallyTimeSpent" value="30228000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,8 +533,8 @@
           <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding>
             <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -649,8 +649,8 @@
           <caret line="325" column="39" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
           <folding>
             <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -767,8 +767,8 @@
           <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding>
             <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -797,8 +797,8 @@
           <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding>
             <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -827,8 +827,8 @@
           <caret line="324" column="14" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding>
             <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
           </folding>
         </state>
       </provider>
@@ -891,6 +891,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/output_layer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fullyconnected_layer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3713">
+          <caret line="338" column="52" selection-start-line="338" selection-start-column="52" selection-end-line="338" selection-end-column="52" />
+          <folding>
+            <element signature="e#11092#11637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/activation.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -899,10 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/output_layer.cpp">
+    <entry file="file://$PROJECT_DIR$/src/mnist_parser.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="150">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -926,10 +952,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/network.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#268#316#0" expanded="true" />
+            <element signature="e#688#7768#0" expanded="true" />
+            <marker date="1480781484000" expanded="true" signature="21050:21068" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fullyconnected_layer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="135" column="32" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+        <state relative-caret-position="270">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="e#672#814#0" expanded="true" />
             <element signature="e#1246#2077#0" expanded="true" />
@@ -938,48 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mnist_parser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/network.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="616" column="26" selection-start-line="616" selection-start-column="26" selection-end-line="616" selection-end-column="26" />
-          <folding>
-            <element signature="e#268#316#0" expanded="true" />
-            <element signature="e#690#7770#0" expanded="true" />
-            <marker date="1480771980000" expanded="true" signature="21052:21070" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fullyconnected_layer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3713">
-          <caret line="338" column="52" selection-start-line="338" selection-start-column="52" selection-end-line="338" selection-end-column="52" />
-          <folding>
-            <element signature="e#11092#11637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding>
             <element signature="e#48#68#0" expanded="true" />
           </folding>
