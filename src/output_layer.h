@@ -46,6 +46,7 @@ namespace mlp{
 
         void fprintW(FILE*){};
 
+        float_t getW2() {return 0;}
 #ifdef GPU
 		void transfer_weight_h2d(){};
 		void transfer_weight_d2h(){};

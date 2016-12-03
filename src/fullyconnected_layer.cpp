@@ -338,7 +338,7 @@ namespace mlp{
 				auto delta = alpha_/*learning rate*/
 					* input_[in] * this->next->g_[out]/*err terms*/
 					/*lambda_ momentum*/
-					+ lambda_ * deltaW_[out * in_depth_ + in]
+					//+ lambda_ * deltaW_[out * in_depth_ + in]
 					-  weightDecay_ * alpha_ * W_[out * in_depth_ + in]; //L2 regularization
 				W_[out * in_depth_ + in] += delta;
 				/*update momentum*/
@@ -432,6 +432,14 @@ namespace mlp{
 		return v;
 	}
 
+    float_t FullyConnectedLayer::getW2()
+    {
+        float_t res = 0;
+        for (size_t i = 0; i < out_depth_ * in_depth_; i += in_depth_){
+            res += W_[i]*W_[i];
+        }
+        return res;
+    }
 	FullyConnectedLayer::~FullyConnectedLayer(){
 #ifdef GPU
 		if (W_gpu)checkerror(cudaFree(W_gpu), "cudafree W_gpu");

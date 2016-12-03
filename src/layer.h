@@ -30,6 +30,7 @@ namespace mlp{
 		virtual void remap_best() = 0;
 		virtual void printW() = 0;
 		virtual void printWfixed() = 0;
+        virtual float_t getW2() = 0;
         virtual void fprintW(FILE*) = 0;
 
 #ifdef GPU

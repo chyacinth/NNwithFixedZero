@@ -17,7 +17,7 @@
 #include "cublas_v2.h"
 #endif
 
-
+extern FILE *fp;
 namespace mlp{
 #define MAX_ITER 80000
 #define FIX_NUMBER 25
@@ -315,8 +315,6 @@ namespace mlp{
 
 
         void train(const vec2d_t& train_x, const vec_t& train_y, size_t train_size){
-            FILE *fp;
-            fp = fopen("weight.txt","w");
             train_x_ = train_x;
             train_y_ = train_y;
             train_size_ = train_size;
@@ -338,13 +336,20 @@ namespace mlp{
             std::srand(unsigned(time(NULL)));
 
             for (int i = 0; i < train_size; i++)train_array.push_back(i);
-
+            float weight_decay_term;
             while (iter < MAX_ITER && !stop){
                 printf("%d th iteration\n",iter);
                 iter++;
                 std::random_shuffle(train_array.begin(), train_array.end());
                 auto err = train_once(train_array);
+                weight_decay_term= 0;
                 std::cout << "err: " <<  err << std::endl;
+                for (auto layer:layers)
+                {
+                    weight_decay_term += layer->getW2();
+                }
+                weight_decay_term *= weightDecay_ / 2;
+                std::cout << "err+WeightDecayTerm: " <<  err+weight_decay_term << std::endl;
                 if (err < END_CONDITION) stop = true;
                 for (auto layer:layers)
                 {

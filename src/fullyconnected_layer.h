@@ -103,6 +103,8 @@ namespace mlp{
 		void printWfixed();
 
         void fprintW(FILE*);
+
+        float_t getW2();
 #ifdef GPU
 		void transfer_weight_h2d();
 		void transfer_weight_d2h();

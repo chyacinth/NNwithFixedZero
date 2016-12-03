@@ -12,6 +12,7 @@ using namespace mlp;
 using namespace std;
 
 #define RETRAIN
+FILE *fp;
 
 int main(int argc,char* argv[]){
 	vec2d_t train_x;
@@ -19,19 +20,20 @@ int main(int argc,char* argv[]){
 	vec2d_t test_x;
 	vec_t test_y;
 	//std::ofstream ofile("weight.txt");
+    fp = fopen(argv[argc-1],"w");
 	LOAD_MNIST_TEST(test_x, test_y);
 	LOAD_MNIST_TRAIN(train_x, train_y);
 	float_t inWD = atof(argv[1]);
 	int lay = atoi(argv[2]);
-	Mlp n(0.03, 0.01, inWD);
-	for (int i = 3; i < argc; i++)
+	Mlp n(0.01, 0.01, inWD);
+	for (int i = 3; i < argc-1; i++)
 	{
 		printf("%d\n",atoi(argv[i]));
 		if (i == 3) n.add_layer(new FullyConnectedLayer(28 *28, atoi(argv[i]), new sigmoid_activation));
 		else n.add_layer(new FullyConnectedLayer(atoi(argv[i - 1]),atoi(argv[i]), new sigmoid_activation));
 	}
 	if (lay != 0)
-		n.add_layer(new FullyConnectedLayer(atoi(argv[argc - 1]), 10, new sigmoid_activation));
+		n.add_layer(new FullyConnectedLayer(atoi(argv[argc - 2]), 10, new sigmoid_activation));
 	else
 		n.add_layer(new FullyConnectedLayer(28*28, 10, new sigmoid_activation));
 	/*if (lay == 0) n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
@@ -41,7 +43,7 @@ int main(int argc,char* argv[]){
 		n.add_layer(new FullyConnectedLayer(100, 10, new sigmoid_activation));
 	}*/
 	//n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
-    n.train(train_x,train_y,60000);
+    n.train(train_x,train_y,600);
 
 	
 	/*for(int i=5;i<=8;i++){
