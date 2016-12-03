@@ -23,13 +23,14 @@ int main(int argc,char* argv[]){
     fp = fopen(argv[argc-1],"w");
 	LOAD_MNIST_TEST(test_x, test_y);
 	LOAD_MNIST_TRAIN(train_x, train_y);
-	float_t inWD = atof(argv[1]);
-	int lay = atoi(argv[2]);
-	Mlp n(0.01, 0.01, inWD);
-	for (int i = 3; i < argc-1; i++)
+    float_t learningRate = atof(argv[1]);
+	float_t inWD = atof(argv[2]);
+	int lay = atoi(argv[3]);
+	Mlp n(learningRate, 0.01, inWD);
+	for (int i = 4; i < argc-1; i++)
 	{
 		printf("%d\n",atoi(argv[i]));
-		if (i == 3) n.add_layer(new FullyConnectedLayer(28 *28, atoi(argv[i]), new sigmoid_activation));
+		if (i == 4) n.add_layer(new FullyConnectedLayer(28 *28, atoi(argv[i]), new sigmoid_activation));
 		else n.add_layer(new FullyConnectedLayer(atoi(argv[i - 1]),atoi(argv[i]), new sigmoid_activation));
 	}
 	if (lay != 0)
