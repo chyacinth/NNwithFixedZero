@@ -44,7 +44,7 @@ int main(int argc,char* argv[]){
 		n.add_layer(new FullyConnectedLayer(100, 10, new sigmoid_activation));
 	}*/
 	//n.add_layer(new FullyConnectedLayer(28 *28, 10, new sigmoid_activation));
-    n.train(train_x,train_y,60000);
+    n.train(train_x,train_y,60000,test_x,test_y,10000);
 
 	
 	/*for(int i=5;i<=8;i++){

@@ -314,7 +314,8 @@ namespace mlp{
         }
 
 
-        void train(const vec2d_t& train_x, const vec_t& train_y, size_t train_size){
+        void train(const vec2d_t& train_x, const vec_t& train_y, size_t train_size,
+                   const vec2d_t& test_x, const vec_t& test_y, size_t test_size){
             train_x_ = train_x;
             train_y_ = train_y;
             train_size_ = train_size;
@@ -350,6 +351,8 @@ namespace mlp{
                 }
                 weight_decay_term *= weightDecay_ / 2;
                 std::cout << "err+WeightDecayTerm: " <<  err+weight_decay_term << std::endl;
+                float accu = test(test_x, test_y, test_size);
+                std::cout << "acc: " <<  accu << std::endl;
                 if (err < END_CONDITION) stop = true;
                 for (auto layer:layers)
                 {
@@ -373,7 +376,7 @@ namespace mlp{
                 if (test_once(iter)) bang++;
                 iter++;
             }
-            std::cout << (float)bang / test_size_ << std::endl;
+            //std::cout << (float)bang / test_size_ << std::endl;
             return (float)bang / test_size_;
         }
 
