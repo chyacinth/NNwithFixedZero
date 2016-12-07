@@ -19,7 +19,7 @@
 
 extern FILE *fp;
 namespace mlp{
-#define MAX_ITER 500
+#define MAX_ITER 1000
 #define FIX_NUMBER 25
 #define M 50
 #define END_CONDITION 1e-2
@@ -315,7 +315,7 @@ namespace mlp{
 
 
         void train(const vec2d_t& train_x, const vec_t& train_y, size_t train_size,
-                   const vec2d_t& test_x, const vec_t& test_y, size_t test_size){
+                   const vec2d_t& test_x, const vec_t& test_y, size_t test_size, int itcnt){
             train_x_ = train_x;
             train_y_ = train_y;
             train_size_ = train_size;
@@ -338,7 +338,7 @@ namespace mlp{
 
             for (int i = 0; i < train_size; i++)train_array.push_back(i);
             float weight_decay_term;
-            while (iter < MAX_ITER && !stop){
+            while ((iter < MAX_ITER && !stop) || iter < itcnt){
                 printf("%d th iteration\n",iter);
                 iter++;
                 std::random_shuffle(train_array.begin(), train_array.end());
@@ -359,6 +359,7 @@ namespace mlp{
                     if (iter % 100 == 0)
                     layer->printW();
                 }
+
             }
             for (auto layer:layers)
             {
